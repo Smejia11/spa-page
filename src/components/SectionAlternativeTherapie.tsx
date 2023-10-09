@@ -1,6 +1,6 @@
 "use client";
-import CarouselMain from "@/components/carousel/Carousel";
-import { CarouselWithContent } from "@/components/carousel/CarouselWithContent";
+import CarouselMain from "@/components/Carousel";
+import { CarouselWithContent } from "@/components/CarouselWithContent";
 import { useSectionContext } from "@/hooks/useSectionContext";
 import "../../public/tailandes.svg";
 import Terapia1 from "../../public/terapia1.svg";

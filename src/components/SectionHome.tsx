@@ -1,5 +1,5 @@
 "use client";
-import { CardHome } from "@/components/card/CardHome";
+import { CardHome } from "@/components/CardHome";
 import { useSectionContext } from "@/hooks/useSectionContext";
 
 export default function SectionHome() {
