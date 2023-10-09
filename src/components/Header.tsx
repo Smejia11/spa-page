@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 type fadeAnimation = "fade-up" | "fade-down";

@@ -1,3 +1,4 @@
+"use client";
 import { CardHome } from "@/components/card/CardHome";
 import { useSectionContext } from "@/hooks/useSectionContext";
 

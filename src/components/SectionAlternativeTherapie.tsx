@@ -1,4 +1,4 @@
-
+"use client";
 import CarouselMain from "@/components/carousel/Carousel";
 import { CarouselWithContent } from "@/components/carousel/CarouselWithContent";
 import { useSectionContext } from "@/hooks/useSectionContext";
