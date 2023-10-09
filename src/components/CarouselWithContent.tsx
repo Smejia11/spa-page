@@ -1,4 +1,5 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+"use client";
+import { Typography, Button } from "@material-tailwind/react";
 import Image from "next/image";
 
 interface CarouselProps {

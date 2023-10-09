@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Typography } from "@material-tailwind/react";
 import type { TypographyProps } from "@material-tailwind/react";
