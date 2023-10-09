@@ -9,11 +9,11 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between p-24`}
     >
       <SectionProvider>
-        <Header fade="fade-down" classProps="w-full">
+        {/* <Header fade="fade-down" classProps="w-full">
           <NavbarSimple />
         </Header>
         <SectionHome />
-        <SectionAlternativeTherapie />
+        <SectionAlternativeTherapie /> */}
       </SectionProvider>
     </main>
   );
