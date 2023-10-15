@@ -10,9 +10,8 @@ interface fadeStyle {
 }
 
 function Header({ fade, children, classProps }: fadeStyle) {
-  console.log(classProps);
   return (
-    <div className={classProps} >
+    <div data-aos={fade} className={classProps}>
       {children}
     </div>
   );

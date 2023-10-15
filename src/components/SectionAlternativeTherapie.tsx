@@ -41,7 +41,7 @@ export default function SectionAlternativeTherapie() {
   const { alternativeTherapieRef } = useSectionContext();
   return (
     <div className="h-screen w-screen" ref={alternativeTherapieRef}>
-      <CarouselMain transition={{ duration: 2 }} classNameProps="rounded-xl">
+      <CarouselMain transition={{ duration: 1 }} classNameProps="rounded-xl">
         {data.map(({ title, description, imageUrl }, key) => {
           return (
             <CarouselWithContent
