@@ -2,7 +2,6 @@
 import CarouselMain from "@/components/Carousel";
 import { CarouselWithContent } from "@/components/CarouselWithContent";
 import { useSectionContext } from "@/hooks/useSectionContext";
-import "../../public/tailandes.svg";
 import Terapia1 from "../../public/terapia1.svg";
 import Terapia2 from "../../public/terapia2.svg";
 import Tailandes from "../../public/tailandes.svg";

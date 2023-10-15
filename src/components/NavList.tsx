@@ -1,5 +1,5 @@
 "use client";
-import { Typography } from "@material-tailwind/react";
+import { Typography } from "../components/ExportAppDir";
 import useScroll from "@/hooks/useScroll";
 
 interface NavListProps {
@@ -19,7 +19,7 @@ function NavList({ listNav }: NavListProps) {
           key={key}
         >
           <a
-            onClick={() => scrollToRef(key)}
+            onClick={(e) => scrollToRef(key)}
             href="#"
             className="flex items-center hover:text-blue-500 transition-colors"
           >

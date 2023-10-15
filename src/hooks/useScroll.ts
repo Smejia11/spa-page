@@ -1,8 +1,7 @@
 import { useCallback } from 'react'
 import { useSectionContext } from './useSectionContext';
-interface EnumIndex {
-    [key: number]: React.RefObject<any>;
-}
+import { match, P } from 'ts-pattern';
+
 const useScroll = () => {
     const { homeRef, alternativeTherapieRef, therapeuticMassageRef, formRef } =
         useSectionContext();
@@ -16,12 +15,12 @@ const useScroll = () => {
             console.log(ex);
         }
     }, []);
-    const enumIndex: EnumIndex = {
-        0: homeRef,
-        1: alternativeTherapieRef,
-        2: therapeuticMassageRef,
-    };
-    const scrollToRef = useCallback((index: number) => scrollToSection(enumIndex[index]), [])
+
+    const scrollToRef = useCallback((index: number) => match(index)
+        .with(0, () => scrollToSection(homeRef))
+        .with(1, () => scrollToSection(alternativeTherapieRef))
+        .with(2, () => scrollToSection(therapeuticMassageRef))
+        , [])
     return { scrollToRef }
 
 }

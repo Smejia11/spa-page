@@ -1,15 +1,11 @@
 "use client";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
+import React, { ReactNode } from "react";
+import { Navbar, Collapse, Typography, IconButton } from "./ExportAppDir";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./NavList";
 import { useNavbar } from "@/hooks/useNavbar";
 
-export function NavbarSimple() {
+export function NavbarSimple(): ReactNode {
   const { openNav, setOpenNav, listNav } = useNavbar();
   return (
     <Navbar className="mx-auto max-w-screen-xl px-6 py-3">

@@ -12,8 +12,8 @@ export default function Home() {
         <Header fade="fade-down" classProps="w-full">
           <NavbarSimple />
         </Header>
-        {/* <SectionHome />
-        <SectionAlternativeTherapie /> */}
+        <SectionHome />
+        <SectionAlternativeTherapie />
       </SectionProvider>
     </main>
   );

@@ -1,18 +1,18 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 
 type fadeAnimation = "fade-up" | "fade-down";
 
 interface fadeStyle {
   fade: fadeAnimation;
-  children: JSX.Element[] | JSX.Element;
+  children: ReactNode;
   classProps: string;
 }
 
 function Header({ fade, children, classProps }: fadeStyle) {
   console.log(classProps);
   return (
-    <div className={classProps} data-aos={fade}>
+    <div className={classProps} >
       {children}
     </div>
   );
