@@ -16,12 +16,13 @@ const useScroll = () => {
         }
     }, []);
 
-    const scrollToRef = useCallback((index: number) => match(index)
-        .with(0, () => scrollToSection(homeRef))
-        .with(1, () => scrollToSection(alternativeTherapieRef))
-        .with(2, () => scrollToSection(therapeuticMassageRef))
+    const scrollToRef = useCallback((ref: string) => match(ref)
+        .with('home', () => scrollToSection(homeRef))
+        .with('terapiasAlternativas', () => scrollToSection(alternativeTherapieRef))
+        .with('masajeTerapeutico', () => scrollToSection(therapeuticMassageRef))
         , [])
-    return { scrollToRef }
+    const redirectionHome = useCallback(() => scrollToSection(homeRef), [])
+    return { scrollToRef, redirectionHome }
 
 }
 

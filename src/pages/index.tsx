@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { SectionProvider } from "@/context/sectionContext";
 import SectionHome from "../components/SectionHome";
 import SectionAlternativeTherapie from "../components/SectionAlternativeTherapie";
+import { FooterWithLogo } from "@/components/Footer";
 export default function Home() {
   return (
     <main
@@ -14,6 +15,7 @@ export default function Home() {
         </Header>
         <SectionHome />
         <SectionAlternativeTherapie />
+        <FooterWithLogo />
       </SectionProvider>
     </main>
   );

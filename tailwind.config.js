@@ -7,6 +7,12 @@ module.exports = withMT({
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      borderColor: {
+        brown: "#8B735B", 
+      },
+    },
+  },
   plugins: [],
 });
