@@ -4,6 +4,12 @@ import { SectionProvider } from "@/context/sectionContext";
 import SectionHome from "../components/SectionHome";
 import SectionAlternativeTherapie from "../components/SectionAlternativeTherapie";
 import { FooterWithLogo } from "@/components/Footer";
+import SectionTherapeuticMassage from "@/components/SectionTherapeuticMassage";
+import { SimpleForm } from "@/components/ContactUs";
+import { SnackbarProvider } from "notistack";
+import { SnackbarUtilitiesConfigurator } from "@/utils/snackbarManager";
+import Grow from "@/utils/Grow";
+import { aosAnimation } from "@/types";
 export default function Home() {
   return (
     <main
@@ -15,6 +21,19 @@ export default function Home() {
         </Header>
         <SectionHome />
         <SectionAlternativeTherapie />
+        <SectionTherapeuticMassage />
+        <SnackbarProvider
+          TransitionComponent={Grow}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+        >
+          <SnackbarUtilitiesConfigurator />
+          <div  data-aos={aosAnimation.fadeDown}>
+            <SimpleForm />
+          </div>
+        </SnackbarProvider>
         <FooterWithLogo />
       </SectionProvider>
     </main>

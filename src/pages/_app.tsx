@@ -7,11 +7,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    AOS.init({
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 50,
-    });
+    AOS.init();
   }, []);
   return (
     <ThemeProvider>
