@@ -4,10 +4,11 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail: string | undefined = process.env.FROM_EMAIL;
+const toEmail: string | undefined = process.env.TO_EMAIL
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     try {
-        if (fromEmail === undefined) {
+        if (fromEmail === undefined || toEmail === undefined) {
             return res.status(500).json({ message: 'Sufrimos un error inesperado: el correo del remitente no está configurado.' });
         }
 
@@ -20,12 +21,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         if (!email || !name || !description) {
             return res.status(400).json({ message: 'Faltan campos obligatorios en la solicitud.' });
         }
-        // @ts-ignore
+
         const data = await resend.emails.send({
-            from: fromEmail,
-            to: [fromEmail, email],
-            subject: 'Hello world',
-            react: EmailTemplate({ name, description }),
+            from: fromEmail as string,
+            to: [toEmail],
+            subject: 'Nuevo contacto',
+            react: EmailTemplate({ name, description, email }),
+            text: ''
         });
 
         return res.status(200).json(data);

@@ -3,7 +3,6 @@ import { sendEmail } from "@/services/sendEmail";
 import { SnackbarUtilities } from "@/utils/snackbarManager";
 import {
   Card,
-  Input,
   Button,
   Typography,
   Textarea,
@@ -71,34 +70,29 @@ export function SimpleForm() {
           <Typography variant="h6" color="brown" className="-mb-3">
             Tu nombre
           </Typography>
-          <Input
-            size="lg"
-            color="brown"
-            type="text"
+          <input
+            className="shadow appearance-none border rounded focus:outline w-full py-2 px-3 text-brown-800 leading-tight  focus:shadow-outline"
             name="name"
-            placeholder="nombre"
-            className="!border !border-gray-600 bg-white"
+            type="text"
+            placeholder="Nombre"
           />
           <Typography variant="h6" color="brown" className="-mb-3">
             Email
           </Typography>
-          <Input
-            size="lg"
-            color="brown"
-            type="email"
+          <input
+            className="shadow appearance-none border rounded focus:outline w-full py-2 px-3 text-brown-800 leading-tight  focus:shadow-outline"
             name="email"
-            placeholder="name@mail.com"
-            className="!border !border-gray-600 bg-white"
+            type="email"
+            placeholder="email"
           />
           <Typography variant="h6" color="brown" className="-mb-3">
             Motivo del contacto
           </Typography>
           <div className="lg:w-96">
-            <Textarea
+            <textarea
               name="description"
-              color="brown"
               placeholder="Motivo del contacto"
-              className="!border !border-gray-600 bg-white"
+              className="!resize-y lg:w-96 rounded-md  focus:outline "
             />
           </div>
         </div>
