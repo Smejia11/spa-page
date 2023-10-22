@@ -92,7 +92,7 @@ export function SimpleForm() {
             <textarea
               name="description"
               placeholder="Motivo del contacto"
-              className="!resize-y lg:w-96 rounded-md  focus:outline "
+              className="!resize-y w-full rounded-md  focus:outline h-full "
             />
           </div>
         </div>
