@@ -18,12 +18,13 @@ type DataEmailSend = {
 };
 export function SimpleForm() {
   const [isLoading, setLoading] = useState(false);
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     try {
       setLoading(true);
       e.preventDefault();
       // @ts-ignore
       const dataEmail: DataEmailSend = Object.fromEntries(
+        // @ts-ignore
         new window.FormData(event.target)
       );
       if (
