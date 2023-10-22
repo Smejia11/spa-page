@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail: string | undefined = process.env.FROM_EMAIL;
 const toEmail: string | undefined = process.env.TO_EMAIL
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function POST(req: NextApiRequest, res: NextApiResponse) {
     try {
         if (fromEmail === undefined || toEmail === undefined) {
             return res.status(500).json({ message: 'Sufrimos un error inesperado: el correo del remitente no está configurado.' });
