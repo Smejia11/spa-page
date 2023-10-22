@@ -1,6 +1,6 @@
-import { useSnackbar, VariantType, WithSnackbarProps } from "notistack";
+import { useSnackbar, VariantType } from "notistack";
 
-let useSnackbarRef: WithSnackbarProps;
+let useSnackbarRef: any;
 export const SnackbarUtilitiesConfigurator: React.FC = () => {
   useSnackbarRef = useSnackbar();
   return null;

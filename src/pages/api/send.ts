@@ -10,6 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         if (fromEmail === undefined)
             return res.status(500).json({ message: 'Sufrimos un error inesperado vuelva a intentar mas tarde.' })
         const { email, description, name } = req.body;
+        // @ts-ignore
         const data = await resend.emails.send({
             from: fromEmail,
             to: [fromEmail, email],
