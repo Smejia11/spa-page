@@ -7,7 +7,7 @@ export function FooterWithLogo() {
   const { scrollToRef } = useScroll();
   const listFooter: Array<NavItem> = [
     { ref: "home", value: "Sobre nosotros" },
-    { ref: "terapiasAlternativas", value: "contactenos" },
+    { ref: "contactUs", value: "contactenos" },
   ];
 
   return (
@@ -24,10 +24,7 @@ export function FooterWithLogo() {
             >
               <div
                 key={ref}
-                onClick={(e) => {
-                  console.log(ref);
-                  scrollToRef(ref);
-                }}
+                onClick={() => scrollToRef(ref)}
                 style={{ cursor: "pointer", textDecoration: "underline" }}
               >
                 {value}

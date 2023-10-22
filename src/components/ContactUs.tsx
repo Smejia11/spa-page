@@ -18,25 +18,38 @@ type DataEmailSend = {
 };
 export function SimpleForm() {
   const [isLoading, setLoading] = useState(false);
-  const handleSubmit = async (e) => {
-    setLoading(true);
-    e.preventDefault();
-    const dataEmail: DataEmailSend = Object.fromEntries(
-      new window.FormData(event.target)
-    );
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    try {
+      setLoading(true);
+      e.preventDefault();
+      // @ts-ignore
+      const dataEmail: DataEmailSend = Object.fromEntries(
+        new window.FormData(event.target)
+      );
+      if (
+        dataEmail.email.trim() === "" ||
+        dataEmail.name.trim() === "" ||
+        dataEmail.description.trim() === ""
+      ) {
+        SnackbarUtilities.warning("Los campos no pueden estar vacíos.");
+        return;
+      }
+      const regex = /^[a-zA-Z0-9\s\.,'"!?]+$/i;
 
-    if (
-      dataEmail.email.trim() === "" ||
-      dataEmail.name.trim() === "" ||
-      dataEmail.description.trim() === ""
-    ) {
-      SnackbarUtilities.warning("Los campos no pueden estar vacíos.");
+      if (!regex.test(dataEmail.name) || !regex.test(dataEmail.description)) {
+        SnackbarUtilities.error(
+          "El texto contiene caracteres no permitidos. Por favor, corrígelos."
+        );
+        return;
+      }
+      await sendEmail(dataEmail);
+    } catch (error) {
+      SnackbarUtilities.error(
+        "Lo sentimos, se ha producido un error inesperado."
+      );
+    } finally {
       setLoading(false);
-      return;
     }
-
-    await sendEmail(dataEmail);
-    setLoading(false);
   };
   return (
     <Card color="transparent" shadow={false}>
@@ -57,16 +70,35 @@ export function SimpleForm() {
           <Typography variant="h6" color="brown" className="-mb-3">
             Tu nombre
           </Typography>
-          <Input size="lg" type="text" name="name" label="nombre" />
+          <Input
+            size="lg"
+            color="brown"
+            type="text"
+            name="name"
+            placeholder="nombre"
+            className="!border !border-gray-600 bg-white"
+          />
           <Typography variant="h6" color="brown" className="-mb-3">
             Email
           </Typography>
-          <Input size="lg" type="email" name="email" label="name@mail.com" />
+          <Input
+            size="lg"
+            color="brown"
+            type="email"
+            name="email"
+            placeholder="name@mail.com"
+            className="!border !border-gray-600 bg-white"
+          />
           <Typography variant="h6" color="brown" className="-mb-3">
             Motivo del contacto
           </Typography>
-          <div className="w-96">
-            <Textarea name="description" label="Motivo del contacto" />
+          <div className="lg:w-96">
+            <Textarea
+              name="description"
+              color="brown"
+              placeholder="Motivo del contacto"
+              className="!border !border-gray-600 bg-white"
+            />
           </div>
         </div>
 

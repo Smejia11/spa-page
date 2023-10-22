@@ -29,6 +29,7 @@ type DataAos =
     | "flip-up-right" | "flip-up-left" | "flip-down-right" | "flip-down-left"
     | "slide-up-right" | "slide-up-left" | "slide-down-right" | "slide-down-left";
 
+
 export const aosAnimation: Record<string, DataAos> = {
     fade: "fade",
     fadeUp: "fade-up",

@@ -21,7 +21,9 @@ export const useNavbar = () => {
     }, []);
     const listNav: Array<NavItem> = [{ ref: 'home', value: 'Home' },
     { ref: 'terapiasAlternativas', value: 'Terapias Alternativas' },
-    { ref: 'masajeTerapeutico', value: 'Masaje Terapeutico' }]
+    { ref: 'masajeTerapeutico', value: 'Masaje Terapeutico' },
+    { ref: 'contactUs', value: 'Contactanos' }
+    ]
 
     return { openNav, setOpenNav, listNav }
 }

@@ -5,6 +5,7 @@ interface SectionContextProps {
   alternativeTherapieRef: RefObject<any>;
   therapeuticMassageRef: RefObject<any>;
   formRef: RefObject<any>;
+  contactUsRef: RefObject<any>;
 }
 
 export const SectionContext = createContext<SectionContextProps | undefined>(
@@ -16,12 +17,14 @@ export const SectionProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const alternativeTherapieRef = useRef<any>(null);
   const therapeuticMassageRef = useRef<any>(null);
   const formRef = useRef<any>(null);
+  const contactUsRef = useRef<any>(null);
 
   const contextValue: SectionContextProps = {
     homeRef,
     alternativeTherapieRef,
     therapeuticMassageRef,
     formRef,
+    contactUsRef,
   };
 
   return (
