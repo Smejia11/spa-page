@@ -9,7 +9,7 @@ const fromEmail: string | undefined = process.env.FROM_EMAIL;
 const toEmail: string | undefined = process.env.TO_EMAIL
 
 
-export async function POST(req: { json: () => PromiseLike<{ email: any; description: any; name: any; }> | { email: any; description: any; name: any; }; }) {
+export async function POST(req: any) {
     try {
 
         if (fromEmail === undefined || toEmail === undefined) {
