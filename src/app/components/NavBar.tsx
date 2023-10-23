@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import { Navbar, Collapse, Typography, IconButton } from "./ExportAppDir";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./NavList";
-import { useNavbar } from "@/hooks/useNavbar";
+import { useNavbar } from "@/app/hooks/useNavbar";
 
 export function NavbarSimple(): ReactNode {
   const { openNav, setOpenNav, listNav } = useNavbar();

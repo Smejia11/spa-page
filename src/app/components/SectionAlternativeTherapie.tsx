@@ -1,11 +1,11 @@
 "use client";
-import CarouselMain from "@/components/Carousel";
-import { CarouselWithContent } from "@/components/CarouselWithContent";
-import { useSectionContext } from "@/hooks/useSectionContext";
-import Terapia1 from "../../public/terapia1.svg";
-import Terapia2 from "../../public/terapia2.svg";
-import Tailandes from "../../public/tailandes.svg";
-import reflexologia from "../../public/reflexologia1.svg";
+import CarouselMain from "@/app/components/Carousel";
+import { CarouselWithContent } from "@/app/components/CarouselWithContent";
+import { useSectionContext } from "@/app/hooks/useSectionContext";
+import Terapia1 from "../../../public/terapia1.svg";
+import Terapia2 from "../../../public/terapia2.svg";
+import Tailandes from "../../../public/tailandes.svg";
+import reflexologia from "../../../public/reflexologia1.svg";
 const data = [
   {
     title: "Tuina",

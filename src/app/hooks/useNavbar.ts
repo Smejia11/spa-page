@@ -1,6 +1,12 @@
 
 import { useEffect, useState } from "react";
 
+export type NavItem = {
+    ref: string;
+    value: string;
+};
+
+
 export const useNavbar = () => {
     const [openNav, setOpenNav] = useState<boolean>(false);
 
@@ -13,7 +19,11 @@ export const useNavbar = () => {
             window.removeEventListener("resize", handleWindowResize);
         };
     }, []);
-    const listNav: Array<string> = ['Home', 'Terapias Alternativas', 'Masaje Terapeutico']
+    const listNav: Array<NavItem> = [{ ref: 'home', value: 'Home' },
+    { ref: 'terapiasAlternativas', value: 'Terapias Alternativas' },
+    { ref: 'masajeTerapeutico', value: 'Masaje Terapeutico' },
+    { ref: 'contactUs', value: 'Contactanos' }
+    ]
 
     return { openNav, setOpenNav, listNav }
 }
