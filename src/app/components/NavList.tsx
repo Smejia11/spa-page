@@ -1,7 +1,7 @@
 "use client";
-import { NavItem } from "@/hooks/useNavbar";
-import { Typography } from "../components/ExportAppDir";
-import useScroll from "@/hooks/useScroll";
+import { NavItem } from "@/app/hooks/useNavbar";
+import { Typography } from "./ExportAppDir";
+import useScroll from "@/app/hooks/useScroll";
 
 interface NavListProps {
   listNav: Array<NavItem>;

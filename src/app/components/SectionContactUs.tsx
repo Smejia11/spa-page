@@ -1,10 +1,10 @@
-import { aosAnimation } from "@/types";
-import Grow from "@/utils/Grow";
-import { SnackbarUtilitiesConfigurator } from "@/utils/snackbarManager";
+import { aosAnimation } from "@/app/types";
+import Grow from "@/app/utils/Grow";
+import { SnackbarUtilitiesConfigurator } from "@/app/utils/snackbarManager";
 import { SnackbarProvider } from "notistack";
 import React from "react";
 import { SimpleForm } from "./ContactUs";
-import { useSectionContext } from "@/hooks/useSectionContext";
+import { useSectionContext } from "@/app/hooks/useSectionContext";
 
 function SectionContactUs() {
   const { contactUsRef } = useSectionContext();

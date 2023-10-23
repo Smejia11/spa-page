@@ -1,8 +1,8 @@
 "use client";
-import { useSectionContext } from "@/hooks/useSectionContext";
+import { useSectionContext } from "@/app/hooks/useSectionContext";
 import React from "react";
 import { Typography } from "@material-tailwind/react";
-import { aosAnimation } from "@/types";
+import { aosAnimation } from "@/app/types";
 
 function SectionTherapeuticMassage() {
   const { therapeuticMassageRef } = useSectionContext();

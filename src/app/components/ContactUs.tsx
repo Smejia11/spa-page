@@ -1,11 +1,10 @@
 "use client";
-import { sendEmail } from "@/services/sendEmail";
-import { SnackbarUtilities } from "@/utils/snackbarManager";
+import { sendEmail } from "@/app/services/sendEmail";
+import { SnackbarUtilities } from "@/app/utils/snackbarManager";
 import {
   Card,
   Button,
   Typography,
-  Textarea,
   CardHeader,
   Spinner,
 } from "@material-tailwind/react";

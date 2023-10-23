@@ -1,5 +1,5 @@
 // Custom hook to use the SectionContext
-import { SectionContext } from "@/context/sectionContext";
+import { SectionContext } from "@/app/context/sectionContext";
 import { useContext } from "react";
 
 export const useSectionContext = () => {

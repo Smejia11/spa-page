@@ -1,4 +1,4 @@
-import { TypeWithKey } from "../types/";
+import { TypeWithKey } from "../types";
 
 export const getValidationError = (errorCode: any) => {
     const codeMatcher: TypeWithKey<string> = {

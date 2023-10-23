@@ -1,7 +1,7 @@
 "use client";
-import { CardHome } from "@/components/CardHome";
-import { useSectionContext } from "@/hooks/useSectionContext";
-import { aosAnimation } from "@/types";
+import { CardHome } from "@/app/components/CardHome";
+import { useSectionContext } from "@/app/hooks/useSectionContext";
+import { aosAnimation } from "@/app/types";
 
 export default function SectionHome() {
   const { homeRef } = useSectionContext();

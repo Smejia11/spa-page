@@ -1,6 +1,6 @@
 "use client";
-import { NavItem } from "@/hooks/useNavbar";
-import useScroll from "@/hooks/useScroll";
+import { NavItem } from "@/app/hooks/useNavbar";
+import useScroll from "@/app/hooks/useScroll";
 import { Typography } from "@material-tailwind/react";
 
 export function FooterWithLogo() {

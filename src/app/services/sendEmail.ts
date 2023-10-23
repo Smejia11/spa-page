@@ -1,5 +1,5 @@
-import { getValidationError } from "@/utils/getValidationError";
-import { SnackbarUtilities } from "@/utils/snackbarManager";
+import { getValidationError } from "@/app/utils/getValidationError";
+import { SnackbarUtilities } from "@/app/utils/snackbarManager";
 
 type EmailData = {
     [k: string]: FormDataEntryValue;
