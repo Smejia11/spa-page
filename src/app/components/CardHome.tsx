@@ -11,7 +11,7 @@ export function CardHome() {
   return (
     <Card
       shadow={false}
-      className="relative grid h-[45rem] w-full max-w-[32rem] items-end justify-center overflow-hidden text-center"
+      className="relative  grid h-[45rem] w-full max-w-[32rem] items-end justify-center overflow-hidden text-center"
     >
       <CardHeader
         floated={false}
