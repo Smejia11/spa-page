@@ -88,13 +88,17 @@ function SectionTherapeuticMassage() {
           </Typography>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 " data-aos={aosAnimation.fadeDown}>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 "
+        data-aos={aosAnimation.fadeDown}
+      >
         {listTherapeuticMassage.map(
           ({ title, description, bottonName, imageSrc }, key) => {
             return (
               <div
                 key={key}
-                className="p-3 w-94 h-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+                className="p-3 w-100 h-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+                data-aos={aosAnimation.fadeDown}
               >
                 <div className="">
                   <CardDefault

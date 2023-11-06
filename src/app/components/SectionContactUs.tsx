@@ -18,6 +18,7 @@ function SectionContactUs() {
     >
       <SnackbarUtilitiesConfigurator />
       <div data-aos={aosAnimation.fadeDown} ref={contactUsRef}>
+        <div className="my-10 " />
         <SimpleForm />
       </div>
     </SnackbarProvider>

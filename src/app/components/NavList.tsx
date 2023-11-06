@@ -20,7 +20,7 @@ function NavList({ listNav }: NavListProps) {
           key={ref}
         >
           <a
-            onClick={(e) => scrollToRef(ref)}
+            onClick={() => scrollToRef(ref)}
             href="#"
             className="flex items-center hover:text-blue-500 transition-colors"
           >

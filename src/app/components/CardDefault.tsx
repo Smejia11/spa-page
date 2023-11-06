@@ -6,6 +6,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import useScroll from "../hooks/useScroll";
 
 export interface CardDefaultProps {
   title: string;
@@ -20,6 +21,7 @@ export function CardDefault({
   bottonName,
   imageSrc,
 }: CardDefaultProps) {
+  const { redirectionContactUs } = useScroll();
   return (
     <Card className="h-full w-full justify-self-center place-self-center">
       <CardHeader color="blue-gray" className="relative h-56">
@@ -38,7 +40,9 @@ export function CardDefault({
         </Typography>
       </CardBody>
       <CardFooter className="pt-0 items-center flex justify-center">
-        <Button color="brown" >{bottonName}</Button>
+        <Button onClick={redirectionContactUs} color="brown">
+          {bottonName}
+        </Button>
       </CardFooter>
     </Card>
   );

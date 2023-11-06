@@ -87,7 +87,7 @@ export function SimpleForm() {
           <Typography variant="h6" color="brown" className="-mb-3">
             Motivo del contacto
           </Typography>
-          <div className="lg:w-96 lg:h-50">
+          <div className="lg:w-96 lg:h-60">
             <textarea
               name="description"
               placeholder="Motivo del contacto"
