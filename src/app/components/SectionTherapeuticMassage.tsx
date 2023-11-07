@@ -100,14 +100,12 @@ function SectionTherapeuticMassage() {
                 className="p-3 w-100 h-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
                 data-aos={aosAnimation.fadeDown}
               >
-                <div className="">
-                  <CardDefault
-                    title={title}
-                    description={description}
-                    bottonName={bottonName}
-                    imageSrc={imageSrc}
-                  />
-                </div>
+                <CardDefault
+                  title={title}
+                  description={description}
+                  bottonName={bottonName}
+                  imageSrc={imageSrc}
+                />
               </div>
             );
           }

@@ -11,7 +11,7 @@ export function CardHome() {
   return (
     <Card
       shadow={false}
-      className="relative  grid h-[45rem] w-full max-w-[32rem] items-end justify-center overflow-hidden text-center"
+      className="  grid min-h-[40rem] w-full max-w-[34rem] items-end justify-center overflow-hidden text-center"
     >
       <CardHeader
         floated={false}
@@ -23,7 +23,7 @@ export function CardHome() {
       </CardHeader>
       <CardBody className="relative py-5 px-6 md:px-12">
         <Typography
-          variant="h5"
+          variant="h6"
           color="brown"
           className="mb-6 font-medium leading-[1]"
         >
@@ -32,9 +32,11 @@ export function CardHome() {
           Quiero ser tu aliada en el camino hacia el bienestar, proporcionandote
           servicios profesionales que se ajusten a tu estilo de vida.
         </Typography>
-        <Typography variant="h4" className="mb-4 text-brown-700">
-        ˗ˏˋ Sandra Milena Loaiza ´ˎ˗
-        </Typography>
+        <div className="hidden lg:block md-block">
+          <Typography variant="h4" className="mb-4 text-brown-700">
+            ˗ˏˋ Sandra Milena Loaiza ´ˎ˗
+          </Typography>
+        </div>
       </CardBody>
     </Card>
   );
