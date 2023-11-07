@@ -1,6 +1,7 @@
 "use client";
 import { Typography, Button } from "@material-tailwind/react";
 import Image from "next/image";
+import useScroll from "../hooks/useScroll";
 
 interface CarouselProps {
   title: string;
@@ -17,6 +18,7 @@ export function CarouselWithContent({
   index,
   price,
 }: CarouselProps) {
+  const { redirectionContactUs } = useScroll();
   return (
     <div className="relative h-full w-full">
       <Image
@@ -39,7 +41,7 @@ export function CarouselWithContent({
             {description}
           </Typography>
           <div className="flex justify-center gap-2">
-            <Button size="lg" color="white">
+            <Button onClick={redirectionContactUs} size="lg" color="white">
               Contactanos
             </Button>
           </div>

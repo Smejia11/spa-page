@@ -10,14 +10,19 @@ import SectionTherapeuticMassage from "@/app/components/SectionTherapeuticMassag
 import SectionContactUs from "@/app/components/SectionContactUs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import {
+  ArrowDownCircleIcon,
+  ArrowUpCircleIcon,
+} from "@heroicons/react/24/outline";
+import { IconButton } from "@material-tailwind/react";
+import FabButton from "./components/FabButton";
 export default function Home() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24`}
+      className={`flex min-h-screen flex-col items-center justify-between p-5`}
     >
       <SectionProvider>
         <Header fade="fade-down" classProps="w-full">
@@ -28,6 +33,7 @@ export default function Home() {
         <SectionTherapeuticMassage />
         <SectionContactUs />
         <FooterWithLogo />
+        <FabButton />
       </SectionProvider>
     </main>
   );

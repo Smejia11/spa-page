@@ -3,7 +3,13 @@ import { useSectionContext } from './useSectionContext';
 import { match, P } from 'ts-pattern';
 
 const useScroll = () => {
-    const { homeRef, alternativeTherapieRef, therapeuticMassageRef, contactUsRef } =
+    const {
+        homeRef,
+        alternativeTherapieRef,
+        therapeuticMassageRef,
+        contactUsRef,
+        physiotherapy,
+        relaxing, } =
         useSectionContext();
     const scrollToSection = useCallback((elementRef: { current: { offsetTop: any; }; }) => {
         try {
@@ -20,10 +26,14 @@ const useScroll = () => {
         .with('home', () => scrollToSection(homeRef))
         .with('terapiasAlternativas', () => scrollToSection(alternativeTherapieRef))
         .with('masajeTerapeutico', () => scrollToSection(therapeuticMassageRef))
+        .with('masajeRelajante', () => scrollToSection(relaxing))
+        .with('fisioterapia', () => scrollToSection(physiotherapy))
         .with('contactUs', () => scrollToSection(contactUsRef))
         , [])
     const redirectionHome = useCallback(() => scrollToSection(homeRef), [])
-    return { scrollToRef, redirectionHome }
+    const redirectionContactUs = useCallback(() => scrollToSection(contactUsRef), [])
+
+    return { scrollToRef, redirectionHome, redirectionContactUs }
 
 }
 

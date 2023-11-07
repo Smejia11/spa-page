@@ -9,14 +9,13 @@ export default function SectionHome() {
     <div
       className="h-screen w-screen "
       ref={homeRef}
-      data-aos={aosAnimation.fadeDown}
+      data-aos={aosAnimation.zoomOut}
     >
-      <div className="container mx-auto h-screen p-7">
-        <div
-          className="flex flex-col md:flex-row justify-center items-center"
-          data-aos="fade-down"
-        >
+      <div className="container mx-auto h-screen p-5">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          
           <CardHome />
+          <div className="my-2" />
         </div>
       </div>
     </div>
